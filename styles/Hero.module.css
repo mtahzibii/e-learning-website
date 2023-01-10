@@ -1,0 +1,28 @@
+.hero {
+ height: 100vh;
+ width: 100%;
+ background-color: #eefbf3;
+ display: flex;
+ justify-content: space-between;
+}
+
+.leftSide {
+ margin-top: 6rem;
+}
+
+.rightSide {
+ margin: 0;
+ padding: 0;
+ width: 75%;
+ background: url('/assets/hero_image.png') no-repeat center center;
+ background-size: cover;
+}
+
+.hero p {
+ font-size: 20px;
+ margin-top: 20px;
+ margin-bottom: 0;
+ line-height: 1.8;
+ max-width: 70%;
+ color: rgb(101, 101, 101);
+}

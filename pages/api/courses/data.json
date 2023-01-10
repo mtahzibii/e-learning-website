@@ -1,0 +1,88 @@
+{
+ "courses": [
+  {
+   "id": "1",
+   "name": "Data Science and Machine Learning with Python - Hands On!",
+   "slug": "Data Science and Machine Learning with Python - Hands On!",
+   "category": "Sciece",
+   "cover_img": "/assets/images/cover_images/1.png",
+   "instructor": "Jason Williams",
+   "thumbnail": "/assets/images/thumbnails/jason_williams.png",
+   "duration": "08 hr 15 mins",
+   "lecturesCounts": "29",
+   "price": "$440.00",
+   "discountedPrice": "$385.00",
+   "rating": "4.9"
+  },
+  {
+   "id": "2",
+   "name": "Create Amazing Color Schemes for Your UX Design Projects",
+   "slug": "Create Amazing Color Schemes for Your UX Design Projects",
+   "category": "Sciece",
+   "cover_img": "/assets/images/cover_images/2.png",
+   "instructor": "Pamela Foster",
+   "thumbnail": "/assets/images/thumbnails/pamela_foster.png",
+   "duration": "04 hr",
+   "lecturesCounts": "16",
+   "price": "",
+   "discountedPrice": "$420.00",
+   "rating": "4.9"
+  },
+  {
+   "id": "3",
+   "name": "Culture & Leadership: Strategies for a Successful Business",
+   "slug": "Culture & Leadership: Strategies for a Successful Business",
+   "category": "Sciece",
+   "cover_img": "/assets/images/cover_images/3.png",
+   "instructor": "Rose Simmons",
+   "thumbnail": "/assets/images/thumbnails/rose_simmons.png",
+   "duration": "06 hr 30 mins",
+   "lecturesCounts": "23",
+   "price": "$340.00",
+   "discountedPrice": "$295.00",
+   "rating": "4.2"
+  },
+  {
+   "id": "4",
+   "name": "Finance Series: Learn to Budget and Calculate your Net Worth.",
+   "slug": "Finance Series: Learn to Budget and Calculate your Net Worth.",
+   "category": "Finance",
+   "cover_img": "/assets/images/cover_images/4.png",
+   "instructor": "John Doe",
+   "thumbnail": "/assets/images/thumbnails/john_doe.png",
+   "duration": "05 hr 15 mins",
+   "lecturesCounts": "18",
+   "price": "Free",
+   "discountedPrice": "",
+   "rating": "3.5"
+  },
+  {
+   "id": "5",
+   "name": "Build Brand Into Marketing: Tackling the New Marketing Landscape",
+   "slug": "Build Brand Into Marketing: Tackling the New Marketing Landscape",
+   "category": "Marketing",
+   "cover_img": "/assets/images/cover_images/5.png",
+   "instructor": "Jack Wilson",
+   "thumbnail": "/assets/images/thumbnails/jack_wilson.png",
+   "duration": "04 hr",
+   "lecturesCounts": "15",
+   "price": "",
+   "discountedPrice": "$136.00",
+   "rating": "4"
+  },
+  {
+   "id": "6",
+   "name": "Graphic Design: Illustrating Badges and Icons with Geometric Shapes",
+   "slug": "Graphic Design: Illustrating Badges and Icons with Geometric Shapes",
+   "category": "Design",
+   "cover_img": "/assets/images/cover_images/6.png",
+   "instructor": "Bernard Peet",
+   "thumbnail": "/assets/images/thumbnails/bernard_peet.png",
+   "duration": "09 hr 30 min",
+   "lecturesCounts": "32",
+   "price": "$450.00",
+   "discountedPrice": "$390.00",
+   "rating": "4.5"
+  }
+ ]
+}

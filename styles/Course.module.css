@@ -1,0 +1,65 @@
+.courses {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.category {
+ width: 100px;
+ height: 35px;
+ line-height: 35px;
+ background-color: #e7f8ee;
+ border-radius: 5px;
+ font-size: 14px;
+ color: #309255;
+ display: inline-block;
+ text-align: center;
+ border-radius: 5px;
+ padding: 0 10px;
+ border: none;
+}
+
+.category:hover {
+ background-color: #309255;
+ color: white;
+}
+
+.boxContainer {
+ margin: 15px;
+}
+
+.boxContainer > p {
+ font-size: 18px;
+ margin-top: 10px;
+}
+
+.courseInfo {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.price {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #e7f8ee;
+ width: 100%;
+ border-radius: 10px;
+}
+
+.price h5 {
+ font-weight: bold;
+ color: #309255;
+ font-size: 22px;
+ text-decoration: line-through;
+}
+
+.discounted {
+ font-weight: bold;
+ color: #309255;
+ font-size: 20px;
+}
+
+.beforeDiscount {
+ text-decoration: line-through;
+}

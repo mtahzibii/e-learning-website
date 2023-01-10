@@ -18,7 +18,7 @@ function Layout({ title, description, keywords, children }) {
     />
    </Head>
    <Header />
-   <div className='container'>{children}</div>
+   <div className=''>{children}</div>
 
    <Footer />
   </div>
