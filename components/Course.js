@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Course.module.css';
 import {
  BsClockFill,
@@ -15,18 +16,21 @@ function Course({ course }) {
    style={{ borderRadius: '15px', maxWidth: '30%' }}
   >
    <div className={styles.boxContainer}>
-    <Image
-     src={course.cover_img}
-     alt='cover_image'
-     width={330}
-     height={200}
-     className='my-1 mb-3'
-     style={{ borderRadius: '15px' }}
-    />
+    <Link href={`/courses/${course.slug}`}>
+     <Image
+      src={course.cover_img}
+      alt='cover_image'
+      width={330}
+      height={200}
+      className='my-1 mb-3'
+      style={{ borderRadius: '15px' }}
+     />
+    </Link>
     <div className='d-flex justify-content-between align-items-center'>
-     <div className='d-flex justify-content-center align-items-center '>
+     <div className='d-flex justify-content-center align-items-center mb-3'>
       <Image
        src={course.thumbnail}
+       alt='thumbnail'
        width={50}
        height={50}
        className='rounded-circle me-2'
@@ -35,9 +39,15 @@ function Course({ course }) {
      </div>
      <button className={styles.category}>{course.category}</button>
     </div>
-    <p className='lead fw-semibold '>{course.name}</p>
+    <Link
+     href={`/courses/${course.slug}`}
+     className='lead fw-semibold'
+     style={{ textDecoration: 'none', color: 'rgb(59, 58, 58)', fontSize: '16px' }}
+    >
+     {course.name}
+    </Link>
 
-    <div className={styles.courseInfo}>
+    <div className={`${styles.courseInfo} mt-3`}>
      <div className='d-flex justify-content-center align-items-center gap-2 text-muted'>
       <BsClockFill /> {course.duration}
      </div>

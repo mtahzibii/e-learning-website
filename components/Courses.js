@@ -1,8 +1,10 @@
-const { courses } = require('../pages/api/courses/data.json');
+// const { courses } = require('../pages/api/courses/data.json');
 import Course from './Course';
 import styles from '../styles/Courses.module.css';
+import { API_URL } from '../config/index';
 
-function Courses() {
+export default function Courses({ courses }) {
+ console.log(courses);
  return (
   <div className='section'>
    <h1>
@@ -18,4 +20,13 @@ function Courses() {
  );
 }
 
-export default Courses;
+export async function getServerSideProps() {
+ const res = await fetch('http://localhost:3000/api/courses');
+ const courses = await res.json();
+
+ return {
+  props: {
+   courses,
+  },
+ };
+}

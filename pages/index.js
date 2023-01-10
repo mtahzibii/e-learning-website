@@ -1,14 +1,34 @@
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
-import Courses from '../components/Courses';
-import { useRouter } from 'next/router';
+import Course from '../components/Course';
+import { API_URL } from '../config';
 
-export default function Home() {
- const router = useRouter();
+export default function Home({ courses }) {
  return (
   <Layout title='e-Learning Website'>
    <Hero />
-   <Courses className='section' />
+   <div className='section'>
+    <h1>
+     All <span className='text-success'>Courses </span> of Edule
+    </h1>
+
+    <div className='d-flex flex-wrap justify-content-start align-items-center gap-5 mt-5'>
+     {courses.map((course) => (
+      <Course key={course.id} course={course} />
+     ))}
+    </div>
+   </div>
   </Layout>
  );
+}
+
+export async function getServerSideProps() {
+ const res = await fetch(`${API_URL}/api/courses`);
+ const courses = await res.json();
+
+ return {
+  props: {
+   courses,
+  },
+ };
 }
