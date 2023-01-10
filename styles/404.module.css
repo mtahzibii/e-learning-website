@@ -1,0 +1,15 @@
+.error {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 1rem;
+ text-align: center;
+ /* margin: 100px 0 100px; */
+ height: 100vh;
+}
+
+.error h1 {
+ font-size: 50px;
+ color: brown;
+}
