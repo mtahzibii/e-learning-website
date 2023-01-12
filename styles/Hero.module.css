@@ -1,5 +1,5 @@
 .hero {
- height: 100vh;
+ height: 90vh;
  width: 100%;
  background-color: #eefbf3;
  display: flex;
@@ -8,14 +8,15 @@
 
 .leftSide {
  margin-top: 6rem;
+ padding-left: 5%;
 }
 
 .rightSide {
+ background: url('../public/assets/hero_image.png') no-repeat center center;
+ background-size: contain;
  margin: 0;
  padding: 0;
- width: 75%;
- background: url('/assets/hero_image.png') no-repeat center center;
- background-size: cover;
+ width: 70%;
 }
 
 .hero p {

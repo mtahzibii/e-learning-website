@@ -1,3 +1,4 @@
+import { AuthProvider } from '../context/AuthContext';
 import '../styles/globals.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import { useEffect } from 'react';
@@ -12,7 +13,9 @@ export default function App({ Component, pageProps }) {
    <Head>
     <meta name='viewport' content='width=device-width, initial-scale=1' />
    </Head>
-   <Component {...pageProps} />
+   <AuthProvider>
+    <Component {...pageProps} />
+   </AuthProvider>
   </>
  );
 }

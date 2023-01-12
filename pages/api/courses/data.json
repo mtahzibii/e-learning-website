@@ -12,7 +12,11 @@
    "lecturesCounts": "29",
    "price": "$440.00",
    "discountedPrice": "$385.00",
-   "rating": "4.9"
+   "rating": "4.9",
+   "language": "English",
+   "certificate": "No",
+   "level": "Secondary",
+   "enrolled": "899"
   },
   {
    "id": "2",
@@ -26,7 +30,11 @@
    "lecturesCounts": "16",
    "price": "",
    "discountedPrice": "$420.00",
-   "rating": "4.9"
+   "rating": "4.9",
+   "language": "English",
+   "certificate": "Yes",
+   "level": "Advanced",
+   "enrolled": "312"
   },
   {
    "id": "3",
@@ -40,7 +48,11 @@
    "lecturesCounts": "23",
    "price": "$340.00",
    "discountedPrice": "$295.00",
-   "rating": "4.2"
+   "rating": "4.2",
+   "language": "French",
+   "certificate": "Yes",
+   "level": "Basic",
+   "enrolled": "75"
   },
   {
    "id": "4",
@@ -54,7 +66,11 @@
    "lecturesCounts": "18",
    "price": "Free",
    "discountedPrice": "",
-   "rating": "3.5"
+   "rating": "3.5",
+   "language": "English",
+   "certificate": "Yes",
+   "level": "Secondary",
+   "enrolled": "658"
   },
   {
    "id": "5",
@@ -68,7 +84,11 @@
    "lecturesCounts": "15",
    "price": "",
    "discountedPrice": "$136.00",
-   "rating": "4"
+   "rating": "4",
+   "language": "German",
+   "certificate": "Yes",
+   "level": "Advanced",
+   "enrolled": "207"
   },
   {
    "id": "6",
@@ -82,7 +102,11 @@
    "lecturesCounts": "32",
    "price": "$450.00",
    "discountedPrice": "$390.00",
-   "rating": "4.5"
+   "rating": "4.5",
+   "language": "English",
+   "certificate": "No",
+   "level": "Secondary",
+   "enrolled": "356"
   }
  ]
 }

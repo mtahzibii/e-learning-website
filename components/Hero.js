@@ -3,7 +3,7 @@ import styles from '../styles/Hero.module.css';
 function Hero() {
  return (
   <>
-   <div className={`${styles.hero} section`}>
+   <div className={`${styles.hero} `}>
     {/* left side */}
     <div className={styles.leftSide}>
      <h4 className='text-success '>Start your favourite course</h4>
@@ -20,6 +20,7 @@ function Hero() {
       typesetting.
      </p>
     </div>
+
     {/* Right side */}
     <div className={styles.rightSide}></div>
    </div>
