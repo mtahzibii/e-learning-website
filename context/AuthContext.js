@@ -7,6 +7,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
  const [user, setUser] = useState(null);
+ const [order, setOrder] = useState(null);
  const [error, setError] = useState(null);
 
  const router = useRouter();
@@ -28,7 +29,7 @@ export const AuthProvider = ({ children }) => {
   const data = await res.json();
   if (res.ok) {
    setUser(data.user);
-   router.push('/accounts/dashboard');
+   router.push('/courses');
   } else {
    setError(data.message);
    setError(null);
@@ -47,7 +48,7 @@ export const AuthProvider = ({ children }) => {
 
   if (res.ok) {
    setUser(data.user);
-   router.push('/accounts/dashboard');
+   router.push('/courses');
   } else {
    setError(data.message);
   }
@@ -77,9 +78,29 @@ export const AuthProvider = ({ children }) => {
   }
  };
 
+ //  Place order
+ const placeOrder = async (order) => {
+  const res = await fetch(`${NEXT_URL}/api/placeOrder`, {
+   method: 'POST',
+   headers: {
+    'Content-Type': 'application/json',
+   },
+   body: JSON.stringify(order),
+  });
+
+  const { data } = await res.json();
+
+  if (res.ok) {
+   //  setOrder(order);
+   router.push('/accounts/dashboard');
+  } else {
+   setError('data.message');
+  }
+ };
+
  return (
   <AuthContext.Provider
-   value={{ login, logout, register, checkUserLoggedIn, user, error }}
+   value={{ login, logout, register, checkUserLoggedIn, placeOrder, user, error }}
   >
    {children}
   </AuthContext.Provider>

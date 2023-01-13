@@ -16,7 +16,7 @@ function Course({ course }) {
    style={{ borderRadius: '15px', maxWidth: '30%' }}
   >
    <div className={styles.boxContainer}>
-    <Link href={`/courses/${course.slug}`}>
+    <Link href={`/courses/${course.id}`}>
      <Image
       src={course.cover_img}
       alt='cover_image'
@@ -40,7 +40,7 @@ function Course({ course }) {
      <button className={styles.category}>{course.category}</button>
     </div>
     <Link
-     href={`/courses/${course.slug}`}
+     href={`/courses/${course.id}`}
      className='lead fw-semibold'
      style={{ textDecoration: 'none', color: 'rgb(59, 58, 58)', fontSize: '16px' }}
     >

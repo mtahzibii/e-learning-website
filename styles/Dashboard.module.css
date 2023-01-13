@@ -1,0 +1,12 @@
+.dashboard {
+ margin: 30px 100px;
+}
+
+.dashboard h1 {
+ margin-bottom: 30px;
+}
+
+.dashboard h3 {
+ font-size: 25px;
+ color: red;
+}

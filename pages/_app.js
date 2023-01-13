@@ -1,6 +1,6 @@
-import { AuthProvider } from '../context/AuthContext';
-import '../styles/globals.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../styles/globals.css';
+import { AuthProvider } from '../context/AuthContext';
 import { useEffect } from 'react';
 import Head from 'next/head';
 

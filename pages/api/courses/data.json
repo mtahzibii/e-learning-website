@@ -16,13 +16,14 @@
    "language": "English",
    "certificate": "No",
    "level": "Secondary",
-   "enrolled": "899"
+   "enrolled": "899",
+   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
    "id": "2",
    "name": "Create Amazing Color Schemes for Your UX Design Projects",
    "slug": "Create Amazing Color Schemes for Your UX Design Projects",
-   "category": "Sciece",
+   "category": "Science",
    "cover_img": "/assets/images/cover_images/2.png",
    "instructor": "Pamela Foster",
    "thumbnail": "/assets/images/thumbnails/pamela_foster.png",
@@ -34,13 +35,14 @@
    "language": "English",
    "certificate": "Yes",
    "level": "Advanced",
-   "enrolled": "312"
+   "enrolled": "312",
+   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
    "id": "3",
    "name": "Culture & Leadership: Strategies for a Successful Business",
    "slug": "Culture & Leadership: Strategies for a Successful Business",
-   "category": "Sciece",
+   "category": "Science",
    "cover_img": "/assets/images/cover_images/3.png",
    "instructor": "Rose Simmons",
    "thumbnail": "/assets/images/thumbnails/rose_simmons.png",
@@ -52,12 +54,13 @@
    "language": "French",
    "certificate": "Yes",
    "level": "Basic",
-   "enrolled": "75"
+   "enrolled": "75",
+   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
    "id": "4",
-   "name": "Finance Series: Learn to Budget and Calculate your Net Worth.",
-   "slug": "Finance Series: Learn to Budget and Calculate your Net Worth.",
+   "name": "Finance Series: Learn to Budget and Calculate your Net Worth",
+   "slug": "Finance Series: Learn to Budget and Calculate your Net Worth",
    "category": "Finance",
    "cover_img": "/assets/images/cover_images/4.png",
    "instructor": "John Doe",
@@ -70,7 +73,8 @@
    "language": "English",
    "certificate": "Yes",
    "level": "Secondary",
-   "enrolled": "658"
+   "enrolled": "658",
+   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
    "id": "5",
@@ -88,7 +92,8 @@
    "language": "German",
    "certificate": "Yes",
    "level": "Advanced",
-   "enrolled": "207"
+   "enrolled": "207",
+   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   },
   {
    "id": "6",
@@ -106,7 +111,8 @@
    "language": "English",
    "certificate": "No",
    "level": "Secondary",
-   "enrolled": "356"
+   "enrolled": "356",
+   "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   }
  ]
 }

@@ -1,0 +1,25 @@
+.course {
+ margin: 10px 0;
+ padding: 10px;
+ border-radius: 5px;
+ border: 1px #ddd solid;
+ background-color: #f4f4f4;
+ display: flex;
+ align-items: center;
+ justify-content: flex-start;
+}
+
+.link {
+ text-decoration: none;
+ flex: 2;
+ margin-bottom: 10px;
+}
+
+.edit,
+.delete {
+ margin: 10px;
+}
+
+.delete {
+ color: red;
+}
