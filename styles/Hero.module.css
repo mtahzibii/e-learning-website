@@ -14,7 +14,7 @@
 .rightSide {
  background: url('../public/assets/hero_image.png') no-repeat center center;
  background-size: contain;
- margin: 0;
+ margin: 50px 30px 0;
  padding: 0;
  width: 70%;
 }

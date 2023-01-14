@@ -1,5 +1,7 @@
 export default async (req, res) => {
+ console.log(req.body);
  if (req.method === 'POST') {
+  console.log(req.body);
   const strapiResponse = await fetch('http://localhost:1337/api/orders', {
    method: 'POST',
    headers: {
@@ -9,7 +11,8 @@ export default async (req, res) => {
   });
 
   const data = await strapiResponse.json();
-  console.log(data);
+
+  // console.log(data);
 
   if (strapiResponse.ok) {
    res.status(200).json(data);
@@ -17,7 +20,7 @@ export default async (req, res) => {
    res.status(405).json({ message: 'something went wrong' });
   }
  } else {
-  res.setHeader('Allow', ['GET']);
-  res.status(405).json({ message: `${req.method} not allowedsss` });
+  res.setHeader('Allow', ['POST']);
+  res.status(405).json({ message: `Method ${req.method} not allowedsss` });
  }
 };

@@ -8,13 +8,13 @@ export default function Home({ courses }) {
   <Layout title='e-Learning Website'>
    <Hero />
    <div className='section'>
-    <h1>
+    <h1 className='mb-4'>
      All <span className='text-success'>Courses </span> of Edule
     </h1>
 
-    <div className='d-flex flex-wrap justify-content-start align-items-center gap-5 mt-5'>
+    <div className='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3'>
      {courses.map((course) => (
-      <Course key={course.id} course={course} />
+      <Course key={course.id} course={course.attributes} courseId={course.id} />
      ))}
     </div>
    </div>
@@ -23,12 +23,12 @@ export default function Home({ courses }) {
 }
 
 export async function getServerSideProps() {
- const res = await fetch(`${API_URL}/api/courses`);
- const courses = await res.json();
+ const res = await fetch(`http://localhost:1337/api/courses?populate=*`);
+ const { data } = await res.json();
 
  return {
   props: {
-   courses,
+   courses: data,
   },
  };
 }

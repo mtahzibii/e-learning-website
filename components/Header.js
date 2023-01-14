@@ -35,14 +35,17 @@ function Header() {
     </li>
    </ul>
 
-   <div className='col-md-3 text-end'>
+   <div className='d-flex '>
     {!user ? (
      <>
-      <Link href='/accounts/login' className='btn btn-outline-primary me-3'>
+      <Link href='/accounts/login' className='btn btn-outline-success me-3'>
        Login
       </Link>
 
-      <Link href='/accounts/register' className='btn btn-outline-primary me-3'>
+      <Link
+       href='/accounts/register'
+       className='btn btn-outline-success bg-success me-3 text-light'
+      >
        Sign-up
       </Link>
      </>

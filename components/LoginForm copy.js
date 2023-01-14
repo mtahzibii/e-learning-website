@@ -36,23 +36,15 @@ function LoginForm() {
  };
 
  return (
-  <div className='row m-5 border' style={{ borderRadius: '20px' }}>
-   <ToastContainer />
-   <div className='col-12 col-sm-12 col-md-6'>
-    <div className='mx-auto'>
-     <Image
-      src='/assets/regsiter_form.png'
-      alt='image'
-      width={350}
-      height={500}
-      className='m-5'
-     />
+  <div className={styles.mainDiv}>
+   <div className={styles.innerDiv}>
+    <ToastContainer />
+    <div className={styles.leftSide}>
+     <Image src='/assets/regsiter_form.png' alt='image' width={350} height={500} />
     </div>
-   </div>
-   <div className='col-12 col-md-6'>
-    <div className={styles.login}>
-     <h1 className='my-5 '>Login From</h1>
-     <form onSubmit={onSubmitHandler} className='w-75 '>
+    <div className={styles.rightSide}>
+     <h2 className='mb-5'>Login From</h2>
+     <form onSubmit={onSubmitHandler}>
       <input
        id='email'
        value={email}

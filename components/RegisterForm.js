@@ -36,14 +36,22 @@ function RegisterForm() {
  };
 
  return (
-  <div className={styles.mainDiv}>
-   <div className={styles.innerDiv}>
-    <div className={styles.leftSide}>
-     <Image src='/assets/regsiter_form.png' alt='image' width={350} height={500} />
+  <div className='row m-5 border' style={{ borderRadius: '20px' }}>
+   <div className='col-12 col-sm-12 col-md-6'>
+    <div className='mx-auto'>
+     <Image
+      src='/assets/regsiter_form.png'
+      alt='image'
+      width={350}
+      height={500}
+      className='m-5'
+     />
     </div>
-    <div className={styles.rightSide}>
-     <h2 className='mb-5'>Registration From</h2>
-     <form onSubmit={onSubmitHandler}>
+   </div>
+   <div className='col-12 col-md-6'>
+    <div className={styles.register}>
+     <h2 className='my-5'>Registration From</h2>
+     <form onSubmit={onSubmitHandler} className='w-75 mb-5'>
       <input
        id='username'
        value={username}

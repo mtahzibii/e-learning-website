@@ -2,6 +2,7 @@ import Layout from '../../components/Layout';
 import Image from 'next/image';
 import { NEXT_URL } from '../../config';
 import { useContext } from 'react';
+import { useRouter } from 'next/router';
 import AuthContext from '../../context/AuthContext';
 import {
  BsPerson,
@@ -17,9 +18,15 @@ import {
 
 export default function CoursePage({ course }) {
  const { user, placeOrder } = useContext(AuthContext);
+ const router = useRouter();
 
  const placeOrderHandler = async (e) => {
   e.preventDefault();
+
+  if (!user) {
+   router.push('/accounts/login');
+   return;
+  }
 
   const order = {
    course,
@@ -34,13 +41,21 @@ export default function CoursePage({ course }) {
    <div style={{ margin: '60px 70px' }}>
     <div className='row'>
      <div className='col-8'>
-      <Image
-       src='/assets/course_info.png'
-       alt='course_image'
-       width={760}
-       height={400}
-       className='ms-3 rounded-3'
-      />
+      <div
+       className='w-100'
+       style={{
+        height: '400px',
+        position: 'relative',
+       }}
+      >
+       <Image
+        src='/assets/course_info.png'
+        alt='course_image'
+        fill={true}
+        className='ms-3 rounded-3'
+        style={{ objectFit: 'cover' }}
+       />
+      </div>
       <button
        className='btn '
        style={{

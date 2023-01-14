@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
    router.push('/courses');
   } else {
    setError(data.message);
-   setError(null);
+   //  setError(null);
   }
  };
  //  Login user
@@ -80,7 +80,7 @@ export const AuthProvider = ({ children }) => {
 
  //  Place order
  const placeOrder = async (order) => {
-  const res = await fetch(`${NEXT_URL}/api/placeOrder`, {
+  const res = await fetch(`http://localhost:3000/api/placeOrder`, {
    method: 'POST',
    headers: {
     'Content-Type': 'application/json',
