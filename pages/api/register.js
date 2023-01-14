@@ -1,5 +1,6 @@
 import cookie from 'cookie';
 
+// Post request to DB to register new user
 export default async (req, res) => {
  if (req.method === 'POST') {
   const strapiResponse = await fetch(

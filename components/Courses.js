@@ -1,8 +1,7 @@
 // const { courses } = require('../pages/api/courses/data.json');
 import Course from './Course';
 
-export default function Courses({ courses }) {
- console.log(courses);
+function Courses({ courses }) {
  return (
   <Layout title='e-Learning Website'>
    <Hero />
@@ -25,11 +24,11 @@ export async function getServerSideProps() {
  const res = await fetch('http://localhost:1337/api/courses');
  const { data } = await res.json();
 
- console.log(data);
-
  return {
   props: {
    courses: data,
   },
  };
 }
+
+export default Courses;

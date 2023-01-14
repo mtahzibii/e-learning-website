@@ -1,6 +1,7 @@
 // import { API_URL } from '../../config'
 import cookie from 'cookie';
 
+// Get request to authorize user
 export default async (req, res) => {
  if (req.method === 'GET') {
   if (!req.headers.cookie) {

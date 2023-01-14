@@ -1,0 +1,21 @@
+.courseInfo {
+ display: flex;
+ justify-content: space-between;
+ border-top: 1px solid rgb(208, 207, 207);
+ padding-top: 10px;
+}
+.courseInfo p {
+ font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+ .courseInfo {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+ }
+ .courseInfo p {
+  font-size: 15px;
+ }
+}

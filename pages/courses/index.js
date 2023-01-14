@@ -3,7 +3,6 @@ import Course from '../../components/Course';
 import { API_URL } from '../../config';
 
 export default function CoursesPage({ courses }) {
- console.log(courses);
  return (
   <Layout title='e-Learning Website'>
    <div className='section'>

@@ -1,6 +1,7 @@
 // import { API_URL } from '../../config'
 import cookie from 'cookie';
 
+// Log out request
 export default async (req, res) => {
  if (req.method === 'POST') {
   // clear cookie

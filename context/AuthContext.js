@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { API_URL, NEXT_URL } from '../config';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const AuthContext = createContext();
 
@@ -12,6 +13,7 @@ export const AuthProvider = ({ children }) => {
 
  const router = useRouter();
 
+ //  Check user logged in as page loads / user dependent
  useEffect(() => {
   () => checkUserLoggedIn;
  }, [user]);
@@ -35,6 +37,7 @@ export const AuthProvider = ({ children }) => {
    //  setError(null);
   }
  };
+
  //  Login user
  const login = async (user) => {
   const res = await fetch(`${NEXT_URL}/api/login`, {
@@ -80,7 +83,7 @@ export const AuthProvider = ({ children }) => {
 
  //  Place order
  const placeOrder = async (order) => {
-  const res = await fetch(`http://localhost:3000/api/placeOrder`, {
+  const res = await fetch(`${NEXT_URL}/api/placeOrder`, {
    method: 'POST',
    headers: {
     'Content-Type': 'application/json',
@@ -91,7 +94,7 @@ export const AuthProvider = ({ children }) => {
   const { data } = await res.json();
 
   if (res.ok) {
-   //  setOrder(order);
+   setOrder(data);
    router.push('/accounts/dashboard');
   } else {
    setError('data.message');

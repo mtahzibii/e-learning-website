@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout';
 import Image from 'next/image';
+import styles from '../../styles/CourseInfo.module.css';
 import { NEXT_URL } from '../../config';
 import { useContext } from 'react';
 import { useRouter } from 'next/router';
@@ -12,8 +13,6 @@ import {
  BsBook,
  BsTrophy,
  BsStar,
- BsStarFill,
- BsStarHalf,
 } from 'react-icons/bs';
 
 export default function CoursePage({ course }) {
@@ -23,6 +22,7 @@ export default function CoursePage({ course }) {
  const placeOrderHandler = async (e) => {
   e.preventDefault();
 
+  // Check is user is logged in
   if (!user) {
    router.push('/accounts/login');
    return;
@@ -33,6 +33,7 @@ export default function CoursePage({ course }) {
    user,
   };
 
+  // Set user order
   placeOrder(order);
  };
 
@@ -40,7 +41,7 @@ export default function CoursePage({ course }) {
   <Layout>
    <div style={{ margin: '60px 70px' }}>
     <div className='row'>
-     <div className='col-8'>
+     <div className='col-12 col-lg-8 '>
       <div
        className='w-100'
        style={{
@@ -95,60 +96,59 @@ export default function CoursePage({ course }) {
      </div>
 
      {/* Description */}
-
-     <div className='col-4 '>
+     <div className='col-12 col-lg-4'>
       <div
        className='mx-3 mx-auto border py-4 px-2 rounded-3 '
        style={{ backgroundColor: '#e7f8ee' }}
       >
-       <div className='mx-3'>
+       <div className='my-4 mx-3'>
         <h1
-         className='text-center text-success mb-5 fw-bold'
+         className='text-center text-success mb-5 fw-bold '
          style={{ fontSize: '36px' }}
         >
          {course.discountedPrice}
         </h1>
 
-        <div className='d-flex justify-content-between border-top  pt-2 '>
+        <div className={styles.courseInfo}>
          <div>
           <BsPerson /> <span className='ms-1 fw-bold'>Instructor</span>
          </div>
-         <p style={{ fontSize: '20px' }}>{course.instructor}</p>
+         <p>{course.instructor}</p>
         </div>
 
-        <div className='d-flex justify-content-between border-top  pt-2 '>
+        <div className={styles.courseInfo}>
          <div>
           <BsClock /> <span className='ms-1 fw-bold'>Duration</span>
          </div>
-         <p style={{ fontSize: '20px' }}>{course.duration}</p>
+         <p>{course.duration}</p>
         </div>
 
-        <div className='d-flex justify-content-between border-top  pt-2 '>
+        <div className={styles.courseInfo}>
          <div>
           <BsCameraVideo /> <span className='ms-1 fw-bold'>Lectures</span>
          </div>
-         <p style={{ fontSize: '20px' }}>{course.lecturesCounts}</p>
+         <p>{course.lecturesCounts}</p>
         </div>
 
-        <div className='d-flex justify-content-between border-top  pt-2 '>
+        <div className={styles.courseInfo}>
          <div>
           <BsBarChart /> <span className='ms-1 fw-bold'>Level</span>
          </div>
-         <p style={{ fontSize: '20px' }}>{course.level}</p>
+         <p>{course.level}</p>
         </div>
 
-        <div className='d-flex justify-content-between border-top  pt-2 '>
+        <div className={styles.courseInfo}>
          <div>
           <BsBook /> <span className='ms-1 fw-bold'>Language</span>
          </div>
-         <p style={{ fontSize: '20px' }}>{course.language}</p>
+         <p>{course.language}</p>
         </div>
 
-        <div className='d-flex justify-content-between border-top  pt-2 '>
+        <div className={styles.courseInfo}>
          <div>
           <BsTrophy /> <span className='ms-1 fw-bold'>Certificate</span>
          </div>
-         <p style={{ fontSize: '20px' }}>{course.certificate}</p>
+         <p>{course.certificate}</p>
         </div>
 
         <button

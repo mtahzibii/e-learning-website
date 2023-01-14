@@ -1,5 +1,6 @@
 const { courses } = require('./data.json');
 
+// Filter courses as request ID
 export default (req, res) => {
  const course = courses.filter((crs) => crs.id === req.query.id);
 

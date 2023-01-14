@@ -5,7 +5,6 @@ import styles from '../../styles/Dashboard.module.css';
 import DashboardCourse from '../../components/DashboardCourse';
 
 function DashboardPage({ orders }) {
- console.log(orders);
  return (
   <Layout title='Dashboard'>
    <div className={styles.dashboard}>
@@ -14,6 +13,7 @@ function DashboardPage({ orders }) {
 
     {orders.length === 0 && <>No orders enrolled</>}
 
+    {/* List all orders */}
     {orders.map((order) => (
      <DashboardCourse key={order.id} order={order.attributes.course.data[0]} />
     ))}
@@ -25,9 +25,10 @@ function DashboardPage({ orders }) {
 export default DashboardPage;
 
 export async function getServerSideProps({ req }) {
+ // Get token from request header
  const token = cookie.parse(req ? req.headers.cookie || '' : '');
- console.log(token);
 
+ //  Fetch user orderds
  const res = await fetch('http://localhost:1337/api/orders?populate=*', {
   method: 'GET',
   headers: {

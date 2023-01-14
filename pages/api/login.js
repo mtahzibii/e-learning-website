@@ -6,6 +6,7 @@ export default async (req, res) => {
  if (req.method === 'POST') {
   const { email: identifier, password } = req.body;
 
+  // Fetch user from DB
   const strapiResponse = await fetch(`http://localhost:1337/api/auth/local`, {
    method: 'POST',
    headers: {
@@ -29,6 +30,7 @@ export default async (req, res) => {
     })
    );
 
+   //  Return user as response
    res.status(200).json({ user: data.user });
   } else {
    res.status(data.error.status).json({ message: data.error.message });

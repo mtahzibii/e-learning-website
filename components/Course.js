@@ -6,7 +6,6 @@ import {
  BsFillJournalBookmarkFill,
  BsStar,
  BsStarFill,
- BsStarHalf,
 } from 'react-icons/bs';
 
 function Course({ course, courseId }) {
@@ -35,6 +34,8 @@ function Course({ course, courseId }) {
       </Link>
      </div>
     </div>
+
+    {/* Course body */}
     <div class='card-body'>
      <div className='d-flex justify-content-between align-items-center'>
       <div className='d-flex justify-content-center align-items-center mb-3'>
@@ -60,6 +61,7 @@ function Course({ course, courseId }) {
       {course.name}
      </Link>
 
+     {/* Course Details */}
      <div className={`${styles.courseInfo} mt-3`}>
       <div className='d-flex justify-content-center align-items-center gap-2 text-muted'>
        <BsClockFill /> {course.duration}

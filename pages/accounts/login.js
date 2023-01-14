@@ -8,6 +8,7 @@ function LoginPage() {
  const { user } = useContext(AuthContext);
  const router = useRouter();
 
+ //  Check if user is already logged in
  if (user) {
   router.push('/courses');
  }

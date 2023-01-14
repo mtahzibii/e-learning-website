@@ -1,18 +1,18 @@
 export default async (req, res) => {
- console.log(req.body);
+ const { user, course } = req.body;
  if (req.method === 'POST') {
-  console.log(req.body);
+  const token = cookie.parse(req ? req.headers.cookie || '' : '');
+
   const strapiResponse = await fetch('http://localhost:1337/api/orders', {
    method: 'POST',
    headers: {
     'Content-Type': 'application/json',
+    Authorization: `Bearer ${token}`,
    },
-   body: JSON.stringify(req.body),
+   body: JSON.stringify({ user, course }),
   });
 
   const data = await strapiResponse.json();
-
-  // console.log(data);
 
   if (strapiResponse.ok) {
    res.status(200).json(data);

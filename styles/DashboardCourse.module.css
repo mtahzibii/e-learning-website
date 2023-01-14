@@ -12,14 +12,5 @@
 .link {
  text-decoration: none;
  flex: 2;
- margin-bottom: 10px;
-}
-
-.edit,
-.delete {
- margin: 10px;
-}
-
-.delete {
- color: red;
+ margin: 0 10px;
 }
