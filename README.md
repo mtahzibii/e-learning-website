@@ -6,15 +6,7 @@ This project was designed and implemented by order of the **Bugloos** company. U
 \
 &nbsp;
 
-## Basic Features
-
-- User login
-- User Logout
-- User Registeration
-  \
-  &nbsp;
-
-## Tech Stack
+## Project Stack
 
 - Next.js (Frontend Framework)
 - Context API (Satet Management)
@@ -28,7 +20,7 @@ This project was designed and implemented by order of the **Bugloos** company. U
 
 ## setup Backend
 
-The Strapi backend can be found here.
+The Strapi backend can be found [here] [https://github.com/mtahzibii/e-learning-backend].
 
 ```bash
 cd backend
