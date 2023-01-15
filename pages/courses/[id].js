@@ -1,4 +1,3 @@
-import { NEXT_URL } from '../../config';
 import Layout from '../../components/Layout';
 import Image from 'next/image';
 import styles from '../../styles/CourseInfo.module.css';
