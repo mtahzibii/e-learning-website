@@ -1,4 +1,3 @@
-// import { API_URL } from '../../config'
 import cookie from 'cookie';
 
 // Log out request

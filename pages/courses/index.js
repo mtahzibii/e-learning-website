@@ -21,7 +21,7 @@ export default function CoursesPage({ courses }) {
 }
 
 export async function getServerSideProps() {
- const res = await fetch(`http://localhost:1337/api/courses?populate=*`);
+ const res = await fetch(`${API_URL}/api/courses?populate=*`);
  const { data } = await res.json();
 
  return {

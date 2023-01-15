@@ -1,5 +1,6 @@
-// import { API_URL } from '../../config'
+import { API_URL } from '../../config';
 import cookie from 'cookie';
+import { API_URL } from '../../config';
 
 // Get request to authorize user
 export default async (req, res) => {
@@ -10,7 +11,7 @@ export default async (req, res) => {
   }
   const { token } = cookie.parse(req.headers.cookie);
 
-  const strapiResponse = await fetch(`http://localhost:1337/api/users/me`, {
+  const strapiResponse = await fetch(`${API_URL}/api/users/me`, {
    method: 'GET',
    headers: {
     Authorization: `Bearer ${token}`,

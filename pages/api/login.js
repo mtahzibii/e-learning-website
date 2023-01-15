@@ -1,5 +1,4 @@
-// import { API_URL } from '../../config'
-import { NEXT_URL } from '../../config';
+import { API_URL } from '../../config';
 import cookie from 'cookie';
 
 export default async (req, res) => {
@@ -7,7 +6,7 @@ export default async (req, res) => {
   const { email: identifier, password } = req.body;
 
   // Fetch user from DB
-  const strapiResponse = await fetch(`http://localhost:1337/api/auth/local`, {
+  const strapiResponse = await fetch(`${API_URL}/api/auth/local`, {
    method: 'POST',
    headers: {
     'Content-Type': 'application/json',

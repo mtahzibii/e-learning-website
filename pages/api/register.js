@@ -1,18 +1,17 @@
+import { API_URL } from '../../config';
+
 import cookie from 'cookie';
 
 // Post request to DB to register new user
 export default async (req, res) => {
  if (req.method === 'POST') {
-  const strapiResponse = await fetch(
-   `http://localhost:1337/api/auth/local/register`,
-   {
-    method: 'POST',
-    headers: {
-     'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(req.body),
-   }
-  );
+  const strapiResponse = await fetch(`${API_URL}/api/auth/local/register`, {
+   method: 'POST',
+   headers: {
+    'Content-Type': 'application/json',
+   },
+   body: JSON.stringify(req.body),
+  });
 
   const data = await strapiResponse.json();
 

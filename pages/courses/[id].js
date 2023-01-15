@@ -1,3 +1,4 @@
+import { NEXT_URL } from '../../config';
 import Layout from '../../components/Layout';
 import Image from 'next/image';
 import styles from '../../styles/CourseInfo.module.css';
@@ -169,7 +170,7 @@ export default function CoursePage({ course }) {
 }
 
 export async function getServerSideProps({ query: { id } }) {
- const res = await fetch(`http://localhost:3000/api/courses/${id}`);
+ const res = await fetch(`${NEXT_URL}/api/courses/${id}`);
  const data = await res.json();
 
  return {

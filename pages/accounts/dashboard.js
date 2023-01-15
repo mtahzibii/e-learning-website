@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import styles from '../../styles/Dashboard.module.css';
 import DashboardCourse from '../../components/DashboardCourse';
+import { API_URL } from '../../config';
 
 function DashboardPage({ orders }) {
  return (
@@ -29,7 +30,7 @@ export async function getServerSideProps({ req }) {
  const token = cookie.parse(req ? req.headers.cookie || '' : '');
 
  //  Fetch user orderds
- const res = await fetch('http://localhost:1337/api/orders?populate=*', {
+ const res = await fetch(`${API_URL}/api/orders?populate=*`, {
   method: 'GET',
   headers: {
    Authorization: `Bearer ${token}`,

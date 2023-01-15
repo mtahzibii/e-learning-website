@@ -1,9 +1,11 @@
+import { API_URL } from '../../config';
+
 export default async (req, res) => {
  const { user, course } = req.body;
  if (req.method === 'POST') {
   const token = cookie.parse(req ? req.headers.cookie || '' : '');
 
-  const strapiResponse = await fetch('http://localhost:1337/api/orders', {
+  const strapiResponse = await fetch(`${API_URL}/api/orders`, {
    method: 'POST',
    headers: {
     'Content-Type': 'application/json',

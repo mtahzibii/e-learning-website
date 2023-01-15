@@ -6,6 +6,14 @@ This project was designed and implemented by order of the **Bugloos** company. U
 \
 &nbsp;
 
+![e-Learning-hero](/public/screenshots/all_courses.png)
+
+![e-Learning-sign-up](/public/screenshots/sign_up.png)
+
+![e-Learning-Dashboard](/public/screenshots/dashboard)
+
+![e-Learning-main_page](/public/screenshots/main_page.png)
+
 ## Project Stack
 
 - Next.js (Frontend Framework)

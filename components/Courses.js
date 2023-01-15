@@ -1,4 +1,4 @@
-// const { courses } = require('../pages/api/courses/data.json');
+import { API_URL } from '../config';
 import Course from './Course';
 
 function Courses({ courses }) {
@@ -21,7 +21,7 @@ function Courses({ courses }) {
 }
 
 export async function getServerSideProps() {
- const res = await fetch('http://localhost:1337/api/courses');
+ const res = await fetch(`${API_URL}/api/courses`);
  const { data } = await res.json();
 
  return {
