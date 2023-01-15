@@ -4,13 +4,13 @@ import styles from '../styles/AuthForm.module.css';
 import Image from 'next/image';
 import { useState, useContext, useEffect } from 'react';
 import AuthContext from '../context/AuthContext';
+import Spinner from './Spinner';
 
 function LoginForm() {
- const { error, login, user } = useContext(AuthContext);
+ const { error, login, user, isLoading } = useContext(AuthContext);
 
  useEffect(() => {
   error && toast.error(error);
-  user && toast.success('Logged in successfully');
  }, [error, user]);
 
  const [formData, setFormData] = useState({
@@ -32,8 +32,16 @@ function LoginForm() {
    password,
   };
 
-  login(user);
+  // Check forms are filled out
+  const hasEmptyField = Object.values(formData).some((element) => element === '');
+  if (hasEmptyField) {
+   toast.error('Please fill out all required fields');
+  } else {
+   login(user);
+  }
  };
+
+ if (isLoading) return <Spinner />;
 
  return (
   <div className='row m-5 border' style={{ borderRadius: '20px' }}>
@@ -51,7 +59,7 @@ function LoginForm() {
    </div>
    <div className='col-12 col-md-6'>
     <div className={styles.login}>
-     <h1 className='my-5 '>Login From</h1>
+     <h1 className='my-5 '>Login Form</h1>
      <form onSubmit={onSubmitHandler} className='w-75 '>
       <input
        id='email'

@@ -8,6 +8,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
  const [user, setUser] = useState(null);
+ const [isLoading, setIsLoading] = useState(false);
  const [order, setOrder] = useState(null);
  const [error, setError] = useState(null);
 
@@ -20,6 +21,7 @@ export const AuthProvider = ({ children }) => {
 
  //  Register user
  const register = async (user) => {
+  setIsLoading(true);
   const res = await fetch(`${NEXT_URL}/api/register`, {
    method: 'POST',
    headers: {
@@ -32,6 +34,7 @@ export const AuthProvider = ({ children }) => {
   if (res.ok) {
    setUser(data.user);
    router.push('/courses');
+   setIsLoading(false);
   } else {
    setError(data.message);
    //  setError(null);
@@ -40,6 +43,7 @@ export const AuthProvider = ({ children }) => {
 
  //  Login user
  const login = async (user) => {
+  setIsLoading(true);
   const res = await fetch(`${NEXT_URL}/api/login`, {
    method: 'POST',
    headers: {
@@ -51,7 +55,9 @@ export const AuthProvider = ({ children }) => {
 
   if (res.ok) {
    setUser(data.user);
+   toast.success('Logged in successfuly');
    router.push('/courses');
+   setIsLoading(false);
   } else {
    setError(data.message);
   }
@@ -65,7 +71,7 @@ export const AuthProvider = ({ children }) => {
   if (res.ok) {
    setUser(null);
    router.push('/accounts/login');
-   toast.success('Logged out');
+   toast.success('Logged out successfuly');
   }
  };
 
@@ -103,7 +109,16 @@ export const AuthProvider = ({ children }) => {
 
  return (
   <AuthContext.Provider
-   value={{ login, logout, register, checkUserLoggedIn, placeOrder, user, error }}
+   value={{
+    login,
+    logout,
+    register,
+    checkUserLoggedIn,
+    placeOrder,
+    isLoading,
+    user,
+    error,
+   }}
   >
    {children}
   </AuthContext.Provider>

@@ -11,8 +11,8 @@ import {
 function Course({ course, courseId }) {
  return (
   <div class='col'>
-   <div class='card shadow-sm  h-100'>
-    <div style={{ padding: '10px' }}>
+   <div class='card shadow-sm  h-100' style={{ borderRadius: '15px' }}>
+    <div style={{ padding: '10px 10px' }}>
      <div
       className='w-100'
       style={{
