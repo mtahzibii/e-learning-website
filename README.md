@@ -2,7 +2,7 @@
 
 ## Intro
 
-This project was designed and implemented by order of the **Bugloos** company. Users can login and take the desired course and add to the dashboard.
+This project is developed with the request of **Bugloos** company. Users can register and login and take desired course and add to the dashboard.
 \
 &nbsp;
 
