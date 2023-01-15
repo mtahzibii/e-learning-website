@@ -30,22 +30,32 @@ This project is developed with the request of **Bugloos** company. Users can reg
 
 The Strapi backend can be found [here](https://github.com/mtahzibii/e-learning-backend).
 
+Clone the repo above and run the backend as below commands.
+
 ```bash
 cd backend
 npm install
+nup run develop
 ```
 
-Clone the repo above and run your backend
+### Strapi login info
+
+- username: m.r.tahzibi@gmail.com
+- Password: Bugloos@2023
 
 ## Setup Frontend
 
-First, run the development server:
+First, clone the project and run the development server as below:
 
 ```bash
 - cd frontend
 - npm install
 - npm run dev
 ```
+
+view the application in link below:
+
+http://localhost:3000/
 
 ## More
 
