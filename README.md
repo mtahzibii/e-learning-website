@@ -17,8 +17,9 @@ This project is developed with the request of **Bugloos** company. Users can reg
 ## Project Stack
 
 - Next.js (Frontend Framework)
-- Context API (Satet Management)
 - Strapi (As Headless CMS backend )
+- sqlite (Strapi DB)
+- Context API (Satet Management)
 - Cookie (user Authentication)
 - React-toastify (notofications)
   \
